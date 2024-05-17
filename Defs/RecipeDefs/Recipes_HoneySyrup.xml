@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<RecipeDef>
+		<defName>KYD_HoneySyrup</defName>
+		<label>make honey syrup</label>
+		<description>Create honey syrup by cutting honey with water. While still not good for you, honey syrup is not nearly as bad as straight sugar.</description>
+		<jobString>Making honey syrup.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<workAmount>200</workAmount>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<recipeUsers>
+			<li MayRequire="vanillaexpanded.vcooke">VCE_CondimentPrepTable</li>
+			<li>FueledStove</li>
+			<li>ElectricStove</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li MayRequire="zal.patchhoney">Honey</li>
+						<li MayRequire="sarg.rimbees">RB_Honeys</li>
+						<li MayRequire="sera.apinialienrace">HoneyCategory</li>
+					</categories>
+					<thingDefs>
+						<li>InsectJelly</li> <!-- Fall back for players without any maidens- ahem, honey at all -->
+						<li MayRequire="tsp.zal.patchhoney2">TSP_HoneyWort</li>
+						<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_GnomeHoney</li>
+						<li MayRequire="oskarpotocki.vfe.vikings">VFEV_Honey</li>
+						<li MayRequire="adamas.bees">Bees_Honey</li>
+						<li MayRequire="zoura3025.megabees">MegabeeTallow</li>
+						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
+						<li MayRequire="mlie.tropickapprainforestmod">CK_Honeycomb</li>
+						<li MayRequire="sarg.alphaanimals">AB_BumbledroneFood</li>
+						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="sera.apinialienrace">ApiniHoney</li>
+						<li MayRequire="sera.apinialienrace">ApiniHoney_F</li>
+						<li MayRequire="sera.apinialienrace">ApiniHoney_M</li>
+						<li MayRequire="sera.apinialienrace">ApiniHoney_B</li>
+						<li MayRequire="sera.apinialienrace">ApiniHoney_R</li>
+						<li MayRequire="sera.apinialienrace">ApiniHoney_W</li>
+						<li MayRequire="sera.apinialienrace">ApiniHoney_V</li>
+						<li MayRequire="sarg.rimbees">RB_BaseHoney</li>
+						<li MayRequire="sarg.rimbees">RB_BlueHoney</li>
+						<li MayRequire="sarg.rimbees">RB_TastyHoney</li>
+						<li MayRequire="sarg.rimbees">RB_WhiteHoney</li>
+						<li MayRequire="sarg.rimbees">RB_PsychotropicHoney</li>
+						<li MayRequire="sarg.rimbees">RB_AdaptiveHoney</li>
+						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
+						<li MayRequre="kobo.honeypotants">NormalHoney</li>
+						<li MayRequire="kobo.honeypotants">SurvivalHoney</li>
+					</thingDefs>
+				</filter>
+				<count>0.5</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li MayRequire="zal.patchhoney">Honey</li>
+				<li MayRequire="sarg.rimbees">RB_Honeys</li>
+				<li MayRequire="sera.apinialienrace">HoneyCategory</li>
+			</categories>
+			<thingDefs>
+				<li>InsectJelly</li> <!-- Fall back for players without any maidens- ahem, honey at all -->
+				<li MayRequire="tsp.zal.patchhoney2">TSP_HoneyWort</li>
+				<li MayRequire="TSP.Isengriff.Storytime">TSP_ST_GnomeHoney</li>
+				<li MayRequire="oskarpotocki.vfe.vikings">VFEV_Honey</li>
+				<li MayRequire="adamas.bees">Bees_Honey</li>
+				<li MayRequire="zoura3025.megabees">MegabeeTallow</li>
+				<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
+				<li MayRequire="mlie.tropickapprainforestmod">CK_Honeycomb</li>
+				<li MayRequire="sarg.alphaanimals">AB_BumbledroneFood</li>
+				<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+				<li MayRequire="sera.apinialienrace">ApiniHoney</li>
+				<li MayRequire="sera.apinialienrace">ApiniHoney_F</li>
+				<li MayRequire="sera.apinialienrace">ApiniHoney_M</li>
+				<li MayRequire="sera.apinialienrace">ApiniHoney_B</li>
+				<li MayRequire="sera.apinialienrace">ApiniHoney_R</li>
+				<li MayRequire="sera.apinialienrace">ApiniHoney_W</li>
+				<li MayRequire="sera.apinialienrace">ApiniHoney_V</li>
+				<li MayRequire="sarg.rimbees">RB_BaseHoney</li>
+				<li MayRequire="sarg.rimbees">RB_BlueHoney</li>
+				<li MayRequire="sarg.rimbees">RB_TastyHoney</li>
+				<li MayRequire="sarg.rimbees">RB_WhiteHoney</li>
+				<li MayRequire="sarg.rimbees">RB_PsychotropicHoney</li>
+				<li MayRequire="sarg.rimbees">RB_AdaptiveHoney</li>
+				<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
+				<li MayRequre="kobo.honeypotants">NormalHoney</li>
+				<li MayRequire="kobo.honeypotants">SurvivalHoney</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<KYD_HoneySyrup>15</KYD_HoneySyrup>
+		</products>
+		<researchPrerequisites>
+			<li MayRequire="vanillaexpanded.vcooke">VCE_CondimentsResearch</li>
+		</researchPrerequisites>
+	</RecipeDef>
+</Defs>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
-	<ThingDef ParentName="RoughPlantBase">
+	<ThingDef ParentName="DrugBase">
 		<defName>KYD_RoyalInsectJellyPreserves</defName>
 		<label>royal jelly preserves</label>
 		<description>Royal insect jelly cut with sweetener then sealed as a preserve. Smooth, rich, and provides a massive immunity gain speed boost while not being potent enough to be addictive.</description>
@@ -9,38 +10,73 @@
 			<graphicClass>Graphic_StackCount</graphicClass>
 		</graphicData>
 		<statBases>
-			<MarketValue>11.0</MarketValue>
-			<Nutrition>0.05</Nutrition>
-			<Flammability>1.3</Flammability>
+			<MarketValue>17</MarketValue>
+			<Nutrition>0.1</Nutrition>
+			<Flammability>3</Flammability>
 		</statBases>
-		<thingCategories>
-			<li>VCE_Condiments</li>
+		<thingCategories Inherit="False">
+			<li MayRequire="vanillaexpanded.vcooke">VCE_Condiments</li>
+			<li>AnimalProductRaw</li>
 		</thingCategories>
 		<ingestible>
+			<foodType>Fluid, AnimalProduct</foodType>
 			<preferability>NeverForNutrition</preferability>
+			<tasteThought>KYD_ConsumedRoyalJelly</tasteThought>
 			<specialThoughtAsIngredient>KYD_ConsumedRoyalJelly</specialThoughtAsIngredient>
+			<joyKind>Gluttonous</joyKind>
+			<joy>0.16</joy>
 			<optimalityOffsetFeedingAnimals>-50</optimalityOffsetFeedingAnimals>
+			<outcomeDoers>
+				<li Class="IngestionOutcomeDoer_GiveHediff">
+					<hediffDef>KYD_ConsumedRoyalJelly</hediffDef>
+					<severity>1</severity>
+					<toleranceChemical>VFEI_RoyalJellyChemical</toleranceChemical>
+					<divideByBodySize>false</divideByBodySize>
+				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="oskarpotocki.vfe.insectoid">
+					<hediffDef MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalJellyTolerance</hediffDef>
+					<severity MayRequire="oskarpotocki.vfe.insectoid">0.0001</severity>
+					<divideByBodySize MayRequire="oskarpotocki.vfe.insectoid">false</divideByBodySize>
+					<multiplyByGeneToleranceFactors MayRequire="oskarpotocki.vfe.insectoid">true</multiplyByGeneToleranceFactors>
+				</li>
+				<li Class="VFEI.IngestionOutcomeDoer_Immunity" MayRequire="oskarpotocki.vfe.insectoid">
+					<percent MayRequire="oskarpotocki.vfe.insectoid">0.13</percent>
+				</li>
+			</outcomeDoers>
 		</ingestible>
-		<ingredient>
-		  <mergeCompatibilityTags>
-			<li>Condiments</li>
-		  </mergeCompatibilityTags>
+		<ingredient MayRequire="vanillaexpanded.vcooke">
+			<mergeCompatibilityTags MayRequire="vanillaexpanded.vcooke">
+				<li MayRequire="vanillaexpanded.vcooke">Condiments</li>
+			</mergeCompatibilityTags>
 		</ingredient>
-		<modExtensions>
-			<li Class="AnimalBehaviours.AnimalStatExtension">
-				<statToAdd>
-					<li>VCE_CondimentEffects</li>
-					<li>VCE_HealthEffects</li>
+		<modExtensions MayRequire="vanillaexpanded.vcooke">
+			<li Class="AnimalBehaviours.AnimalStatExtension" MayRequire="vanillaexpanded.vcooke">
+				<statToAdd MayRequire="vanillaexpanded.vcooke">
+					<li MayRequire="vanillaexpanded.vcooke">VCE_CondimentEffects</li>
 				</statToAdd>
-				<statValues>
-					<li>VCE_CondimentEffectsTitle</li>
-					<li>VCE_NoEffect</li>
+				<statValues MayRequire="vanillaexpanded.vcooke">
+					<li MayRequire="vanillaexpanded.vcooke">VCE_CondimentEffectsTitle</li>
 				</statValues>
-				<statDescriptions>
-					<li>KYD_CondimentEffectsRoyalJelly</li>
-					<li>VCE_NoEffectDesc</li>
+				<statDescriptions MayRequire="vanillaexpanded.vcooke">
+					<li MayRequire="vanillaexpanded.vcooke">KYD_CondimentEffectsRoyalJelly</li>
 				</statDescriptions>
 			</li>
 		</modExtensions>
+		<comps>
+			<!--
+			<li Class="CompProperties_Drug">
+				<chemical>VFEI_RoyalJellyChemical</chemical>
+				<addictiveness>0</addictiveness> Diluted
+				<minToleranceToAddict>1</minToleranceToAddict>
+				<existingAddictionSeverityOffset>0.61</existingAddictionSeverityOffset>
+				<needLevelOffset>0.5</needLevelOffset>
+				<listOrder>100</listOrder>
+			</li>
+			-->
+			<li Class="CompProperties_Drug">
+				<listOrder>100</listOrder>
+				<overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+			</li>
+		</comps>
 	</ThingDef>
 </Defs>

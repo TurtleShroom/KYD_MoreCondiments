@@ -1,16 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
 	<!-- ======= Ingredient based thoughts ========= -->
 	<ThoughtDef>	
 		<defName>KYD_ConsumedRoyalJelly</defName>
-		<thoughtClass>VanillaCookingExpanded.Thought_Hediff</thoughtClass>
+		<!-- <thoughtClass MayRequire="vanillaexpanded.vcooke">VanillaCookingExpanded.Thought_Hediff</thoughtClass> -->
+		<workerClass>ThoughtWorker_Hediff</workerClass>
 		<hediff>KYD_ConsumedRoyalJelly</hediff>
-		<durationDays>0.25</durationDays>
+		<durationDays>0.725</durationDays>
 		<stages>
 			<li>
 				<label>consumed royal insect jelly preserves</label>
 				<description>That was smooth, rich, and tasty!</description>
-				<baseMoodEffect>3</baseMoodEffect>
+				<baseMoodEffect>6</baseMoodEffect>
 			</li>
 		</stages>	
 	</ThoughtDef>

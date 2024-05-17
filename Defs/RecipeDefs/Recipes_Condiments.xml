@@ -1,35 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
 <Defs>
 	<RecipeDef>
 		<defName>KYD_RoyalInsectJellyPreserves</defName>
 		<label>make royal jelly preserves</label>
-		<description>Create royal insect jelly preserves from royal insect jelly. Smooth, rich, known for aiding in immunity from infections and diseases.</description>
+		<description>Create royal insect jelly preserves from royal insect jelly. It is smooth and rich, and is well known for aiding in immunity from infections and diseases.</description>
 		<jobString>Making royal jelly preserves.</jobString>
 		<workSpeedStat>CookSpeed</workSpeedStat>
 		<effectWorking>Cook</effectWorking>
 		<soundWorking>Recipe_CookMeal</soundWorking>
 		<workAmount>200</workAmount>
 		<recipeUsers>
-			<li>VCE_CondimentPrepTable</li>
+			<li MayRequire="vanillaexpanded.vcooke">VCE_CondimentPrepTable</li>
+			<li>FueledStove</li>
+			<li>ElectricStove</li>
 		</recipeUsers>
 		<ingredients>
 			<li>
 				<filter>
 					<thingDefs>
-						<li>VFEI_RoyalInsectJelly</li>
+						<li>InsectJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalInsectJelly</li>
+						<li MayRequire="eltwofour.mantodeanrace">ElTwoFour_MantodeanRoyalJelly</li>
+						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
 					</thingDefs>
 				</filter>
 				<count>10</count>
 			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Gold</li>
+					</thingDefs>
+					<count>3</count>
+				</filter>
+			</li>
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
-				<li>VFEI_RoyalInsectJelly</li>
+				<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalInsectJelly</li>
+				<li MayRequire="eltwofour.mantodeanrace">ElTwoFour_MantodeanRoyalJelly</li>
+				<li MayRequire="sera.apinialienrace">ApiniJelly</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<KYD_RoyalInsectJellyPreserves>10</KYD_RoyalInsectJellyPreserves>
+			<KYD_RoyalInsectJellyPreserves>30</KYD_RoyalInsectJellyPreserves>
 		</products>
-		<researchPrerequisite>VCE_CondimentsResearch</researchPrerequisite>
+		<researchPrerequisites>
+			<li MayRequire="vanillaexpanded.vcooke">VCE_CondimentsResearch</li>
+		</researchPrerequisites>
 	</RecipeDef>
 </Defs>

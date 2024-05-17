@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Patch>
+	<Operation Class="PatchOperationConditional">
+		<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/ThingCategoryDef[defName="VCE_Condiments"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/ThingDef[defName="KYD_RoyalInsectJellyPreserves"]/thingCategories/li[text()="AnimalProductRaw"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All accoding to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/ThingDef[defName="VCE_CondimentPrepTable"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="KYD_RoyalInsectJellyPreserves"]/recipeUsers/li[text()="FueledStove"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All accoding to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/ThingDef[defName="VCE_CondimentPrepTable"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="KYD_RoyalInsectJellyPreserves"]/recipeUsers/li[text()="ElectricStove"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All accoding to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationConditional">
+		<!-- DO THE GENTILES KNOW? -->
+		<xpath>/Defs/ThingDef[defName="VCE_CondimentPrepTable"]</xpath>
+		<!-- If they do, SHUT IT DOWN. -->
+		<match Class="PatchOperationRemove">
+			<success>Always</success>
+			<xpath>/Defs/RecipeDef[defName="KYD_RoyalInsectJellyPreserves"]/recipeUsers/li[text()="ElectricStove"]</xpath>
+		</match>
+		<!-- If the first XPATH does not exist, the original code stands. All accoding to plan. -->
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Insectoids</li>
+			<li>Apini Playable Race, Continued!</li>
+			<li>Apini Playable Race</li>
+			<li>Apini Playable Race, New Age</li>
+			<li>Mantodeans Continued</li>
+			<li>Mantodeans</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef[defName="KYD_RoyalInsectJellyPreserves"]/ingredients/li/filter/thingDefs/li[text()="InsectJelly"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef[defName="KYD_RoyalInsectJellyPreserves"]/fixedIngredientFilter/thingDefs/li[text()="InsectJelly"]</xpath>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Insectoids</li>
+			<li>Apini Playable Race, Continued!</li>
+			<li>Apini Playable Race</li>
+			<li>Apini Playable Race, New Age</li>
+			<li>Mantodeans Continued</li>
+			<li>Mantodeans</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef[defName="KYD_RoyalInsectJellyPreserves"]/ingredients/li/filter/thingDefs/li[text()="Gold"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef[defName="KYD_RoyalInsectJellyPreserves"]/fixedIngredientFilter/thingDefs/li[text()="Gold"]</xpath>
+				</li>
+				<li Class="PatchOperationRemove">
+					<xpath>/Defs/RecipeDef[defName="KYD_RoyalInsectJellyPreserves"]/ingredients/li[2]</xpath>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>
