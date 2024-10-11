@@ -23,10 +23,12 @@
 						<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalInsectJelly</li>
 						<li MayRequire="eltwofour.mantodeanrace">ElTwoFour_MantodeanRoyalJelly</li>
 						<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+						<li MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalInsectJelly</li>
 					</thingDefs>
 				</filter>
 				<count>10</count>
 			</li>
+			<!--
 			<li>
 				<filter>
 					<thingDefs>
@@ -35,16 +37,18 @@
 					<count>3</count>
 				</filter>
 			</li>
+			-->
 		</ingredients>
 		<fixedIngredientFilter>
 			<thingDefs>
 				<li MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalInsectJelly</li>
 				<li MayRequire="eltwofour.mantodeanrace">ElTwoFour_MantodeanRoyalJelly</li>
 				<li MayRequire="sera.apinialienrace">ApiniJelly</li>
+				<li MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalInsectJelly</li>
 			</thingDefs>
 		</fixedIngredientFilter>
 		<products>
-			<KYD_RoyalInsectJellyPreserves>30</KYD_RoyalInsectJellyPreserves>
+			<KYD_RoyalInsectJellyPreserves>3</KYD_RoyalInsectJellyPreserves>
 		</products>
 		<researchPrerequisites>
 			<li MayRequire="vanillaexpanded.vcooke">VCE_CondimentsResearch</li>

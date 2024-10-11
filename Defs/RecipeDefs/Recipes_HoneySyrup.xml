@@ -49,6 +49,7 @@
 						<li MayRequire="sarg.rimbees">RB_WhiteHoney</li>
 						<li MayRequire="sarg.rimbees">RB_PsychotropicHoney</li>
 						<li MayRequire="sarg.rimbees">RB_AdaptiveHoney</li>
+						<li MayRequire="sarg.rimbees">RB_PerformanceEnhancingHoney</li>
 						<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
 						<li MayRequre="kobo.honeypotants">NormalHoney</li>
 						<li MayRequire="kobo.honeypotants">SurvivalHoney</li>
@@ -87,6 +88,7 @@
 				<li MayRequire="sarg.rimbees">RB_WhiteHoney</li>
 				<li MayRequire="sarg.rimbees">RB_PsychotropicHoney</li>
 				<li MayRequire="sarg.rimbees">RB_AdaptiveHoney</li>
+				<li MayRequire="sarg.rimbees">RB_PerformanceEnhancingHoney</li>
 				<li MayRequire="sarg.rimbees">RB_BeeMilk</li>
 				<li MayRequre="kobo.honeypotants">NormalHoney</li>
 				<li MayRequire="kobo.honeypotants">SurvivalHoney</li>

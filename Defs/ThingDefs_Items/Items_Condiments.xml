@@ -30,17 +30,33 @@
 				<li Class="IngestionOutcomeDoer_GiveHediff">
 					<hediffDef>KYD_ConsumedRoyalJelly</hediffDef>
 					<severity>1</severity>
-					<toleranceChemical>VFEI_RoyalJellyChemical</toleranceChemical>
+					<!-- <toleranceChemical>VFEI_RoyalJellyChemical</toleranceChemical> -->
 					<divideByBodySize>false</divideByBodySize>
 				</li>
+				<!--
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="oskarpotocki.vfe.insectoid2">
+					<hediffDef>VFEI2_RoyalJellyHigh</hediffDef>
+					<severity>0.50</severity>
+					<toleranceChemical>VFEI2_RoyalJellyChemical</toleranceChemical>
+				</li>
+				-->
 				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="oskarpotocki.vfe.insectoid">
 					<hediffDef MayRequire="oskarpotocki.vfe.insectoid">VFEI_RoyalJellyTolerance</hediffDef>
 					<severity MayRequire="oskarpotocki.vfe.insectoid">0.0001</severity>
 					<divideByBodySize MayRequire="oskarpotocki.vfe.insectoid">false</divideByBodySize>
 					<multiplyByGeneToleranceFactors MayRequire="oskarpotocki.vfe.insectoid">true</multiplyByGeneToleranceFactors>
 				</li>
+				<li Class="IngestionOutcomeDoer_GiveHediff" MayRequire="oskarpotocki.vfe.insectoid2">
+					<hediffDef MayRequire="oskarpotocki.vfe.insectoid2">VFEI2_RoyalJellyTolerance</hediffDef>
+					<severity MayRequire="oskarpotocki.vfe.insectoid2">0.0001</severity>
+					<divideByBodySize MayRequire="oskarpotocki.vfe.insectoid2">false</divideByBodySize>
+					<multiplyByGeneToleranceFactors MayRequire="oskarpotocki.vfe.insectoid2">true</multiplyByGeneToleranceFactors>
+				</li>
 				<li Class="VFEI.IngestionOutcomeDoer_Immunity" MayRequire="oskarpotocki.vfe.insectoid">
-					<percent MayRequire="oskarpotocki.vfe.insectoid">0.13</percent>
+					<percent MayRequire="oskarpotocki.vfe.insectoid">0.15</percent>
+				</li>
+				<li Class="VFEInsectoids.IngestionOutcomeDoer_Immunity" MayRequire="oskarpotocki.vfe.insectoid2">
+					<percent MayRequire="oskarpotocki.vfe.insectoid2">5</percent>
 				</li>
 			</outcomeDoers>
 		</ingestible>
